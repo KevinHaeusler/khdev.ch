@@ -1,6 +1,19 @@
 <template>
-  <div>
-    <Nuxt />
+  <div class="bg-blue-400 flex">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 w-screen">
+      <div class="col-span-full bg-white p-3">
+        <Header />
+      </div>
+      <div class="bg-white">
+        <Sidebar />
+      </div>
+      <div class="bg-white">
+        <Nuxt />
+      </div>
+      <div class="col-span-full bg-white p-3">
+        <Footer />
+      </div>
+    </div>
   </div>
 </template>
 
