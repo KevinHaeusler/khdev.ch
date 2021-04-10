@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <div class="mb-5 pb-5 pt-20 px-5 w-screen bg-white shadow">
+  <div class="lg:ml-10">
+    <div
+      class="mb-5 pb-5 pt-20 px-5 w-screen bg-white shadow lg:mt-5 lg:max-w-screen-lg"
+    >
       <h1>Welcome to KHDev</h1>
       <p>
         Thank you for visiting my website. <br />
@@ -15,7 +17,7 @@
       </p>
     </div>
     <div
-      class="mb-5 bg-white shadow md:h-80"
+      class="mb-5 max-w-screen-lg bg-white shadow md:h-80"
       v-for="article of articles"
       :key="article"
     >
