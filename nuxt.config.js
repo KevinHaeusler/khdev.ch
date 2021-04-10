@@ -1,3 +1,9 @@
+let shiki
+import('shiki') // only seems to work with the promise form of 'import'
+  .then((res) => {
+    shiki = res
+  })
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -39,7 +45,24 @@ export default {
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    nestedProperties: ['categories.slug'],
+    markdown: {
+      prism: {
+        theme: false
+      },
+
+      async highlighter() {
+        const highlighter = await shiki.getHighlighter({
+          // Complete themes: https://github.com/shikijs/shiki/tree/master/packages/themes
+          theme: 'monokai-dark-soda'
+        })
+        return (rawCode, lang) => {
+          return highlighter.codeToHtml(rawCode, lang)
+        }
+      }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
