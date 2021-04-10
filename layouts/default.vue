@@ -1,12 +1,16 @@
 <template>
   <div class="flex flex-col bg-gray-50 lg:flex-row lg:flex-wrap">
+    <HeaderMobile
+      v-if="$device.isMobileOrTablet"
+      class="h-5vh p-3 w-screen text-center text-white bg-stars lg:flex-initial lg:pl-80"
+    />
     <Header
       v-if="$device.isDesktop"
       class="h-5vh p-3 w-screen text-center text-white bg-stars lg:flex-initial lg:pl-80"
     />
     <Sidebar
       v-if="$device.isDesktop"
-      class="h-90vh z-10  bg-white shadow lg:flex-initial lg:w-80"
+      class="h-90vh z-10 dark:text-white dark:bg-gray-900 bg-white shadow lg:flex-initial lg:w-80"
     />
 
     <Nuxt class="h-90vh overflow-y-auto lg:flex-auto" />
