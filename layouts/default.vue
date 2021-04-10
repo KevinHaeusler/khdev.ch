@@ -1,19 +1,12 @@
 <template>
-  <div class="bg-blue-400 flex">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 w-screen">
-      <div class="col-span-full bg-white p-3">
-        <Header />
-      </div>
-      <div class="bg-white">
-        <Sidebar />
-      </div>
-      <div class="bg-white">
-        <Nuxt />
-      </div>
-      <div class="col-span-full bg-white p-3">
-        <Footer />
-      </div>
-    </div>
+  <div class="bg-blue-400 flex flex-col lg:flex-row lg:flex-wrap">
+    <Header class="bg-red-400 p-3 lg:flex-initial w-screen h-5vh" />
+
+    <Sidebar class="bg-white p-3 lg:flex-initial lg:w-80 h-90vh" />
+
+    <Nuxt class="bg-green-400 p-3 lg:flex-auto h-90vh lg:overflow-y-auto" />
+
+    <Footer class="bg-purple-400 p-3 lg:flex-initial w-screen h-5vh" />
   </div>
 </template>
 
@@ -35,6 +28,15 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .h-5vh {
+    height: 5vh;
+  }
+  .h-90vh {
+    height: 90vh;
+  }
 }
 
 .button--green {
