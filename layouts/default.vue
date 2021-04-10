@@ -1,12 +1,23 @@
 <template>
   <div class="bg-blue-400 flex flex-col lg:flex-row lg:flex-wrap">
-    <Header class="bg-red-400 p-3 lg:flex-initial w-screen h-5vh" />
+    <HeaderMobile
+      v-if="$device.isMobileOrTablet"
+      class="bg-red-400 text-center p-3 lg:pl-80 lg:flex-initial w-screen h-5vh"
+    />
+    <Header
+      v-if="$device.isDesktop"
+      class="bg-red-400 text-center p-3 lg:pl-80 lg:flex-initial w-screen h-5vh"
+    />
+    <Sidebar
+      v-if="$device.isDesktop"
+      class="bg-white p-3 lg:flex-initial lg:w-80 h-90vh"
+    />
 
-    <Sidebar class="bg-white p-3 lg:flex-initial lg:w-80 h-90vh" />
+    <Nuxt class="bg-green-400 p-3 lg:flex-auto h-90vh overflow-y-auto" />
 
-    <Nuxt class="bg-green-400 p-3 lg:flex-auto h-90vh lg:overflow-y-auto" />
-
-    <Footer class="bg-purple-400 p-3 lg:flex-initial w-screen h-5vh" />
+    <Footer
+      class="bg-purple-400 p-3 lg:pl-80 text-center lg:flex-initial w-screen h-5vh"
+    />
   </div>
 </template>
 
@@ -68,3 +79,7 @@ html {
   background-color: #35495e;
 }
 </style>
+
+<script>
+export default {}
+</script>

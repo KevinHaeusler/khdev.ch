@@ -1,13 +1,9 @@
 <template>
-  <div>
-    Header
-  </div>
+  <div>Header</div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style></style>
