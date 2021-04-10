@@ -2,21 +2,21 @@
   <div class="bg-blue-400 flex flex-col lg:flex-row lg:flex-wrap">
     <HeaderMobile
       v-if="$device.isMobileOrTablet"
-      class="bg-red-400 text-center p-3 lg:pl-80 lg:flex-initial w-screen h-5vh"
+      class="bg-stars text-white text-center p-3 lg:pl-80 lg:flex-initial w-screen h-5vh"
     />
     <Header
       v-if="$device.isDesktop"
-      class="bg-red-400 text-center p-3 lg:pl-80 lg:flex-initial w-screen h-5vh"
+      class="bg-stars text-white text-center p-3 lg:pl-80 lg:flex-initial w-screen h-5vh"
     />
     <Sidebar
       v-if="$device.isDesktop"
-      class="bg-white p-3 lg:flex-initial lg:w-80 h-90vh"
+      class="bg-white lg:flex-initial lg:w-80 h-90vh shadow z-10"
     />
 
-    <Nuxt class="bg-green-400 p-3 lg:flex-auto h-90vh overflow-y-auto" />
+    <Nuxt class="bg-white p-3 lg:flex-auto h-90vh overflow-y-auto" />
 
     <Footer
-      class="bg-purple-400 p-3 lg:pl-80 text-center lg:flex-initial w-screen h-5vh"
+      class="bg-stars-inverted p-3 lg:pl-80 text-center text-white lg:flex-initial w-screen h-5vh"
     />
   </div>
 </template>
