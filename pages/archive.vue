@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="mb-5 bg-white shadow md:mt-20 md:h-80 lg:m-auto lg:mb-5 lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="mb-5 bg-white shadow md:h-80 lg:m-auto lg:my-5 lg:max-w-screen-sm xl:max-w-screen-lg"
       v-for="article of articles"
       :key="article"
     >
