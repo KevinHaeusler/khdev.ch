@@ -1,19 +1,18 @@
 <template>
   <div>
     <img
-      class="shadow banner"
+      class="banner shadow"
       :src="require(`~/assets/resources/banner/${article.banner}`)"
     />
     <article>
-      <div class="align-left">
-        <a-breadcrumb>
-          <a-breadcrumb-item><a href="/">Home</a></a-breadcrumb-item>
-          <a-breadcrumb-item><a href="/archive">Blog</a></a-breadcrumb-item>
-          <a-breadcrumb-item>{{ article.title }}</a-breadcrumb-item>
-        </a-breadcrumb>
-        <reading-time :content="article.body"></reading-time>
+      <div class="float-left">
+        <a href="/">Home /</a>
+        <a href="/archive">Blog /</a>
+        {{ article.title }}
 
-        <p class="article-description">{{ article.description }}</p>
+        <p class="article-description text-gray-800 font-mono">
+          {{ article.description }}
+        </p>
         <ul class="toc">
           <li
             v-for="link of article.toc"
@@ -24,7 +23,7 @@
           </li>
         </ul>
       </div>
-      <div class="align-right">
+      <div class="float-right">
         <span class="article-description"
           >created at: {{ formatDate(article.createdAt) }} <br />
           last updated at: {{ formatDate(article.updatedAt) }}</span
@@ -35,16 +34,15 @@
         <button>tag</button>
         <button>tag</button>
       </div>
-      <div style="clear: both"></div>
-
+      <div class="clear-both"></div>
       <h1>{{ article.title }}</h1>
       <nuxt-content :document="article" />
 
-      <a-breadcrumb>
-        <a-breadcrumb-item><a href="">Home</a></a-breadcrumb-item>
-        <a-breadcrumb-item><a href="">Blog</a></a-breadcrumb-item>
-        <a-breadcrumb-item>{{ article.title }}</a-breadcrumb-item>
-      </a-breadcrumb>
+      <div class="align-left">
+        <a href="/">Home /</a>
+        <a href="/archive">Blog /</a>
+        {{ article.title }}
+      </div>
     </article>
   </div>
 </template>
@@ -95,14 +93,6 @@ article {
   padding: 0;
 }
 
-.align-left {
-  float: left;
-}
-
-.align-right {
-  float: right;
-}
-
 .tag {
   width: 170px;
 }
@@ -116,7 +106,7 @@ article {
 }
 
 .shiki {
-  padding: 5px;
+  padding: 1rem;
 }
 @media (max-width: 1024px) {
   article {

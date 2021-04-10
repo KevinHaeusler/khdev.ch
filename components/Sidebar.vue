@@ -16,7 +16,6 @@
     <div class="author-description dark:text-white dark:bg-gray-900">
       <span class="author-name">Kevin Haeusler</span>
       <span class="author-tagline">Opensource Supporter, Hobby Gardener </span>
-      <a-divider class="author-divider" type="horizontal" />
       <div class="author-socials">
         <a href="mailto:mail@khdev.ch/"
           ><a-icon type="mail" theme="filled" /> eMail |</a
