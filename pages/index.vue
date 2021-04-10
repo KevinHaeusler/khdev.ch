@@ -1,7 +1,7 @@
 <template>
-  <div class="lg:ml-10">
+  <div class="">
     <div
-      class="mb-5 pb-5 pt-20 px-5 w-screen bg-white shadow lg:mt-5 lg:max-w-screen-lg"
+      class="mb-5 pb-5 pt-20 px-5 w-screen bg-white shadow lg:m-auto lg:mb-5 lg:mt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
     >
       <h1>Welcome to KHDev</h1>
       <p>
@@ -17,7 +17,7 @@
       </p>
     </div>
     <div
-      class="mb-5 max-w-screen-lg bg-white shadow md:h-80"
+      class="mb-5 bg-white shadow md:h-80 lg:m-auto lg:mb-5 lg:max-w-screen-sm xl:max-w-screen-lg"
       v-for="article of articles"
       :key="article"
     >
@@ -28,11 +28,14 @@
         />
         <div class="p-5">
           <h1>{{ article.title }}</h1>
-          <p class="text-gray-800 font-mono">
+          <p class="text-gray-800 font-mono lg:mb-5">
             {{ article.description }} <br />
             Kevin Haeusler | {{ formatDate(article.createdAt) }}
           </p>
-          <nuxt-content class="pb-5" :document="{ body: article.excerpt }" />
+          <nuxt-content
+            class="overflow whitespace-no-wrap pb-5"
+            :document="{ body: article.excerpt }"
+          />
           <button
             class="float-left px-4 py-2 text-white font-bold bg-blue-500 hover:bg-blue-700 rounded"
           >
@@ -76,5 +79,13 @@ h1 {
 }
 h2 {
   @apply text-gray-800 text-xl font-medium;
+}
+@media (min-width: 1024px) and (max-width: 1100px) {
+  .overflow {
+    width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 </style>
