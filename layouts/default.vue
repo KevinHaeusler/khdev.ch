@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-blue-400 flex flex-col lg:flex-row lg:flex-wrap">
+  <div class="bg-gray-50 flex flex-col lg:flex-row lg:flex-wrap">
     <HeaderMobile
       v-if="$device.isMobileOrTablet"
       class="bg-stars text-white text-center p-3 lg:pl-80 lg:flex-initial w-screen h-5vh"
@@ -13,7 +13,7 @@
       class="bg-white lg:flex-initial lg:w-80 h-90vh shadow z-10"
     />
 
-    <Nuxt class="bg-white p-3 lg:flex-auto h-90vh overflow-y-auto" />
+    <Nuxt class="lg:flex-auto h-90vh overflow-y-auto" />
 
     <Footer
       class="bg-stars-inverted p-3 lg:pl-80 text-center text-white lg:flex-initial w-screen h-5vh"
