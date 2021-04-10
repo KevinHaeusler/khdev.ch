@@ -7,8 +7,8 @@
         alt="KHDev Logo White"
       />
       <img
-        class="author-image mx-auto my-5 rounded-full"
-        src="~/assets/resources/author/kevin_haeusler.webp"
+        class="author-image mx-auto my-5 border-4 border-white rounded-full"
+        src="~/assets/resources/author/kevin_haeusler.png"
         alt="Kevin Haeusler"
       />
     </div>
@@ -17,21 +17,21 @@
       <span class="author-name">Kevin Haeusler</span>
       <span class="author-tagline">Opensource Supporter, Hobby Gardener </span>
       <div class="author-socials">
-        <a href="mailto:mail@khdev.ch/"
-          ><a-icon type="mail" theme="filled" /> eMail |</a
-        >
+        <a href="mailto:mail@khdev.ch/"> eMail |</a>
         <a
           href="https://discordapp.com/users/120560434263621634"
           target="_blank"
-          ><a-icon type="wechat" /> Discord |</a
         >
-        <a href="https://github.com/KevinHaeusler/" target="_blank"
-          ><a-icon type="github" /> Github |</a
+          Discord |</a
+        >
+        <a href="https://github.com/KevinHaeusler/" target="_blank">
+          Github |</a
         >
         <a
           href="https://www.linkedin.com/in/kevin-haeusler-3b1a12b2/"
           target="_blank"
-          ><a-icon type="linkedin" theme="filled" /> LinkedIn
+        >
+          LinkedIn
         </a>
       </div>
     </div>
