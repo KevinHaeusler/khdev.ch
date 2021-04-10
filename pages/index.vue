@@ -4,14 +4,17 @@
       class="mb-5 pb-5 pt-20 px-5 w-screen bg-white shadow lg:m-auto lg:mb-5 lg:mt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
     >
       <h1>Welcome to KHDev</h1>
+      <p>Thank you for visiting my website.</p>
+      <br />
       <p>
-        Thank you for visiting my website. <br />
         This is a space for me to write down thoughts and experiences that I
         gained while working on my own projects. This website was created in
         Nuxt.js with Nuxt-Content and Ant Design Vue. This site is currently
         still a work in progress, see the ToDo in the sidebar for what is
         missing. (ToDo is also still missing).
-        <br /><br />
+      </p>
+      <br /><br />
+      <p>
         If you are interested in sporadic cooking and gardening pictures feel
         free to check out kevinhaeusler.com!
       </p>
@@ -28,8 +31,10 @@
         />
         <div class="p-5">
           <h1>{{ article.title }}</h1>
+          <p class="text-gray-800 font-mono">
+            {{ article.description }}
+          </p>
           <p class="text-gray-800 font-mono lg:mb-5">
-            {{ article.description }} <br />
             Kevin Haeusler | {{ formatDate(article.createdAt) }}
           </p>
           <nuxt-content

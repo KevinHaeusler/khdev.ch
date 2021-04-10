@@ -1,22 +1,18 @@
 <template>
-  <div class="bg-gray-50 flex flex-col lg:flex-row lg:flex-wrap">
-    <HeaderMobile
-      v-if="$device.isMobileOrTablet"
-      class="bg-stars text-white text-center p-3 lg:pl-80 lg:flex-initial w-screen h-5vh"
-    />
+  <div class="flex flex-col bg-gray-50 lg:flex-row lg:flex-wrap">
     <Header
       v-if="$device.isDesktop"
-      class="bg-stars text-white text-center p-3 lg:pl-80 lg:flex-initial w-screen h-5vh"
+      class="h-5vh p-3 w-screen text-center text-white bg-stars lg:flex-initial lg:pl-80"
     />
     <Sidebar
       v-if="$device.isDesktop"
-      class="bg-white lg:flex-initial lg:w-80 h-90vh shadow z-10"
+      class="h-90vh z-10  bg-white shadow lg:flex-initial lg:w-80"
     />
 
-    <Nuxt class="lg:flex-auto h-90vh overflow-y-auto" />
+    <Nuxt class="h-90vh overflow-y-auto lg:flex-auto" />
 
     <Footer
-      class="bg-stars-inverted p-3 lg:pl-80 text-center text-white lg:flex-initial w-screen h-5vh"
+      class="h-5vh p-3 w-screen text-center text-white bg-stars-inverted lg:flex-initial lg:pl-80"
     />
   </div>
 </template>
@@ -48,35 +44,6 @@ html {
   .h-90vh {
     height: 90vh;
   }
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
 }
 </style>
 

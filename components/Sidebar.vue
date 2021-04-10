@@ -1,19 +1,19 @@
 <template>
   <div>
-    <div class="bg-stars-inverted pb-5">
+    <div class="pb-5 bg-stars-inverted">
       <img
         class="logo-image"
         src="~/assets/resources/logo/khdev-logo-white.webp"
         alt="KHDev Logo White"
       />
       <img
-        class="author-image rounded-full mx-auto my-5"
+        class="author-image mx-auto my-5 rounded-full"
         src="~/assets/resources/author/kevin_haeusler.webp"
         alt="Kevin Haeusler"
       />
     </div>
 
-    <div class="author-description">
+    <div class="author-description dark:text-white dark:bg-gray-900">
       <span class="author-name">Kevin Haeusler</span>
       <span class="author-tagline">Opensource Supporter, Hobby Gardener </span>
       <a-divider class="author-divider" type="horizontal" />
@@ -40,7 +40,7 @@
     <nuxt-link to="/">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="inline h-6 w-6"
+        class="inline w-6 h-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -62,7 +62,7 @@
     <nuxt-link to="/archive">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="inline h-6 w-6"
+        class="inline w-6 h-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -84,7 +84,7 @@
     <nuxt-link to="/about">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="inline h-6 w-6"
+        class="inline w-6 h-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -102,6 +102,7 @@
       </svg>
       <span class="inline">About</span>
     </nuxt-link>
+    <button>Toggle</button>
   </div>
 </template>
 
