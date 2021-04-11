@@ -5,7 +5,7 @@
     />
     <HeaderMobile
       v-if="$vssWidth <= 768"
-      class="p-3 w-screen h-20 text-center text-white bg-stars lg:flex-initial lg:pl-80"
+      class="p-3 h-20 text-center bg-stars"
     />
     <Sidebar
       v-else

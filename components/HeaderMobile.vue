@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex fixed w-full items-center justify-between px-6 h-16 bg-white text-gray-700 border-b border-gray-200 z-10"
+    class="fixed z-10 flex items-center justify-between px-6 w-full h-16 text-gray-700 dark:text-white bg-white border-b border-gray-200"
   >
     <div class="flex items-center">
       <button class="mr-2" aria-label="Open Menu" @click="drawer">
@@ -19,7 +19,7 @@
       <img
         src="~/assets/resources/logo/khdev-logo-white.webp"
         alt="Logo"
-        class="h-auto w-24"
+        class="w-24 h-auto"
       />
     </div>
 
@@ -34,7 +34,7 @@
       <div
         @keydown.esc="isOpen = false"
         v-show="isOpen"
-        class="z-10 fixed inset-0 transition-opacity"
+        class="fixed z-10 inset-0 transition-opacity"
       >
         <div
           @click="isOpen = false"
@@ -44,135 +44,88 @@
       </div>
     </transition>
     <aside
-      class="transform top-0 left-0 w-64 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30"
+      class="dark:from-tblack dark:via-tblack dark:to-sblack fixed z-30 left-0 top-0 w-64 h-full bg-white bg-gradient-to-b overflow-auto transform transition-all duration-300 ease-in-out"
       :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
     >
       <span
         @click="isOpen = false"
-        class="flex w-full items-center p-4 border-b"
+        class="flex items-center p-4 w-full h-20 bg-stars-author shadow"
       >
         <img
-          src="~/assets/resources/logo/khdev-logo-black.webp"
+          src="~/assets/resources/logo/khdev-logo-white.webp"
           alt="Logo"
-          class="h-auto w-32 mx-auto"
+          class="mx-auto w-32 h-auto"
         />
       </span>
+
       <span
         @click="isOpen = false"
-        class="flex items-center p-4 hover:bg-indigo-500 hover:text-white"
-        ><span class="mr-2">
+        class="flex items-center p-4 hover:text-white hover:bg-indigo-500"
+      >
+      </span>
+      <div class="ml-5 mt-5 text-justify">
+        <nuxt-link class="hover:text-green-400" to="/">
           <svg
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            class="inline-flex mb-1 w-5 h-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
           >
             <path
-              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-            ></path>
+              d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+            />
           </svg>
-        </span>
-        <span>Home</span></span
-      >
-      <span
-        @click="isOpen = false"
-        class="flex items-center p-4 hover:bg-indigo-500 hover:text-white"
-        ><span class="mr-2">
+          <span class="inline-flex">Home</span>
+        </nuxt-link>
+        <br />
+        <nuxt-link class="hover:text-green-400" to="/archive">
           <svg
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            class="inline-flex mb-1 w-5 h-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
           >
             <path
-              d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            ></path>
+              fill-rule="evenodd"
+              d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
+              clip-rule="evenodd"
+            />
+            <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
           </svg>
-        </span>
-        <span>Trending Globally</span></span
-      >
-      <span
-        @click="isOpen = false"
-        class="flex items-center p-4 hover:bg-indigo-500 hover:text-white"
-        ><span class="mr-2">
+          <span class="inline">Blog</span>
+        </nuxt-link>
+        <br />
+        <nuxt-link class="hover:text-green-400" to="/about">
           <svg
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-          >
-            <path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
-          </svg>
-        </span>
-        <span>Wishlist</span></span
-      >
-      <span
-        @click="isOpen = false"
-        class="flex items-center p-4 hover:bg-indigo-500 hover:text-white"
-        ><span class="mr-2">
-          <svg
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            class="inline-flex mb-1 w-5 h-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
           >
             <path
-              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            ></path>
+              fill-rule="evenodd"
+              d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+              clip-rule="evenodd"
+            />
           </svg>
-        </span>
-        <span>About</span></span
-      >
-      <span
-        @click="isOpen = false"
-        class="flex items-center p-4 hover:bg-indigo-500 hover:text-white"
-        ><span class="mr-2">
+          <span class="inline">About</span>
+        </nuxt-link>
+      </div>
+
+      <div class="fixed bottom-0 mb-5 w-full">
+        <button @click="toggle" class="hover:text-green-400">
           <svg
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
+            xmlns="http://www.w3.org/2000/svg"
+            class="inline-flex mb-1 w-5 h-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
           >
             <path
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-            ></path>
+              d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+            />
           </svg>
-        </span>
-        <span>Contact</span></span
-      >
-      <div class="fixed bottom-0 w-full">
-        <a
-          rel="noopener"
-          class="flex items-center p-4 bg-orange-700 text-white"
-          href="https://www.buymeacoffee.com/fayazahmed"
-          target="_blank"
-        >
-          <img
-            class="mr-2 h-8 w-auto"
-            src="~/assets/resources/logo/khdev-logo-black.webp"
-            alt="Buy Me Coffee"
-          />
-          <p>
-            <span class="font-bold">Buy me a Coffee</span>
-            <br />
-            <span class="text-sm text-white">Help me keep this site alive</span>
-          </p>
-        </a>
+          Toggle Dark Mode
+        </button>
       </div>
     </aside>
   </nav>
@@ -188,6 +141,10 @@ export default {
   methods: {
     drawer() {
       this.isOpen = !this.isOpen
+    },
+    toggle() {
+      this.$colorMode.preference =
+        this.$colorMode.value == 'light' ? 'dark' : 'light'
     }
   },
   watch: {
