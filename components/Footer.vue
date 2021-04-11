@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text-sm md:text-base">
     Kevin Haeusler@KHDev ©{{ currentDate.getFullYear() }} built with
     <a class="hover:text-green-400 text-green-500" href="https://nuxtjs.org/"
       >Nuxt</a

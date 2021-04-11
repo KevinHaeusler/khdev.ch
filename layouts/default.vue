@@ -4,7 +4,7 @@
       class="sticky z-10 top-0 p-3 w-screen h-14 text-center text-white bg-stars lg:flex-initial lg:pl-80"
     />
     <HeaderMobile
-      v-if="$vssWidth < 768"
+      v-if="$vssWidth <= 768"
       class="p-3 w-screen h-20 text-center text-white bg-stars lg:flex-initial lg:pl-80"
     />
     <Sidebar
@@ -12,7 +12,7 @@
       class="dark:from-tblack dark:via-tblack dark:to-sblack fixed mt-14 h-full bg-white bg-gradient-to-b shadow lg:flex-initial lg:w-80"
     />
 
-    <Nuxt class="dark:bg-bgray ml-80 pb-20 overflow-y-auto lg:flex-auto" />
+    <Nuxt class="dark:bg-bgray pb-20 overflow-y-auto lg:flex-auto lg:ml-80" />
 
     <Footer
       class="fixed bottom-0 p-3 w-screen h-14 text-center text-white bg-stars-inverted lg:flex-initial lg:pl-80"
