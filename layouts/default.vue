@@ -1,15 +1,14 @@
 <template>
   <div class="flex flex-col lg:flex-row lg:flex-wrap">
-    <HeaderMobile
-      v-if="$device.isMobileOrTablet"
-      class="p-3 w-screen h-20 text-center text-white bg-stars lg:flex-initial lg:pl-80"
-    />
     <Header
-      v-if="$device.isDesktop"
       class="sticky z-10 top-0 p-3 w-screen h-14 text-center text-white bg-stars lg:flex-initial lg:pl-80"
     />
+    <HeaderMobile
+      v-if="$vssWidth < 768"
+      class="p-3 w-screen h-20 text-center text-white bg-stars lg:flex-initial lg:pl-80"
+    />
     <Sidebar
-      v-if="$device.isDesktop"
+      v-else
       class="dark:from-tblack dark:via-tblack dark:to-sblack fixed mt-14 h-full bg-white bg-gradient-to-b shadow lg:flex-initial lg:w-80"
     />
 
@@ -58,5 +57,8 @@ h3 {
 </style>
 
 <script>
-export default {}
+import NuxtSSRScreenSize from 'nuxt-ssr-screen-size'
+export default {
+  mixins: [NuxtSSRScreenSize.NuxtSSRScreenSizeMixin]
+}
 </script>

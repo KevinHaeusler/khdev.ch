@@ -1360,13 +1360,6 @@
     webpack-node-externals "^2.5.2"
     webpackbar "^4.0.0"
 
-"@nuxtjs/device@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/device/-/device-2.0.1.tgz#eb96764ffd0638e1326f82a6930e9a0add411d29"
-  integrity sha512-T/vUOj9DprR+EV/H2lKy3dj6zuYH0yRV8ZnLXK7WbR1ni4Wrj6nw/qqAy60SOfTupefdnDJPKP3pghwCRpBCbQ==
-  dependencies:
-    defu "^3.2.2"
-
 "@nuxtjs/tailwindcss@^4.0.1":
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-4.0.3.tgz#c90d6facc6718dbc6f56f28c3d1daf82544276f7"
@@ -6643,6 +6636,10 @@ num2fraction@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
+
+"nuxt-ssr-screen-size@github:hugojerez/nuxt-ssr-screen-size":
+  version "1.0.0"
+  resolved "https://codeload.github.com/hugojerez/nuxt-ssr-screen-size/tar.gz/d1a23f89b6e6fcfc49b4e53bd2dd3d92519cfbb9"
 
 nuxt@^2.15.3:
   version "2.15.4"
