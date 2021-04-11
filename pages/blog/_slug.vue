@@ -1,11 +1,11 @@
 <template>
   <div>
     <img
-      class="block m-auto mt-5 p-0 w-screen h-80 shadow lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="block m-auto mt-5 p-0 w-screen 3xl:max-w-screen-xl h-80 shadow lg:max-w-screen-sm xl:max-w-screen-lg"
       :src="require(`~/assets/resources/banner/${article.banner}`)"
     />
     <article
-      class="block mb-20 mx-auto px-3 py-8 bg-white shadow lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="block mb-20 mx-auto px-3 py-8 3xl:max-w-screen-xl bg-white shadow lg:max-w-screen-sm xl:max-w-screen-lg"
     >
       <div class="pl-5 text-gray-900 md:float-left">
         <a href="/">Home /</a>
@@ -90,10 +90,5 @@ export default {
 .shiki {
   padding: 1rem;
   overflow: scroll;
-}
-@media (min-width: 2000px) {
-  .xl\:max-w-screen-lg {
-    max-width: 1280px;
-  }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div
-      class="dark:bg-tblack mb-5 pb-5 pt-20 px-5 w-screen dark:text-gray-100 bg-white shadow lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="dark:bg-tblack mb-5 pb-5 pt-20 px-5 w-screen 3xl:max-w-screen-xl dark:text-gray-100 bg-white shadow lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
     >
       <h1>Welcome to KHDev</h1>
       <p>Thank you for visiting my website.</p>
@@ -20,7 +20,7 @@
       </p>
     </div>
     <div
-      class="dark:bg-tblack mb-5 bg-white shadow md:h-80 lg:m-auto lg:mb-5 lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="dark:bg-tblack mb-5 3xl:max-w-screen-xl bg-white shadow md:h-80 lg:m-auto lg:mb-5 lg:max-w-screen-sm xl:max-w-screen-lg"
       v-for="article of articles"
       :key="article"
     >
@@ -74,8 +74,6 @@ export default {
 </script>
 
 <style>
-
-
 @media (min-width: 1024px) and (max-width: 1100px) {
   .overflow {
     width: 200px;

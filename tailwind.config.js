@@ -1,8 +1,12 @@
 module.exports = {
+  mode: 'jit',
   purge: [],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        '3xl': '1920px'
+      },
       backgroundImage: (theme) => ({
         stars: "url('~assets/resources/background/stars.webp')",
 
