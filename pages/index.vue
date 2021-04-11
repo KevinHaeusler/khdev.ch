@@ -40,7 +40,7 @@
             class="overflow whitespace-no-wrap prose prose-green pb-5 max-w-none dark:text-gray-100"
             :document="{ body: article.excerpt }"
           />
-          <button class="float-left px-4 py-2 text-white bg-purple-900 shadow">
+          <button class="float-left px-4 py-2 text-white bg-purple-900 hover:bg-purple-600 shadow">
             Read more
           </button>
           <p class="float-right">Tags</p>

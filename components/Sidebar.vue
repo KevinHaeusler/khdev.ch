@@ -14,8 +14,10 @@
     </div>
 
     <div class="mt-5 dark:text-white">
-      <p class="text-center text-gray-900 text-3xl font-bold">Kevin Haeusler</p>
-      <p class="text-center text-gray-700">
+      <p class="text-center text-gray-900 dark:text-white text-3xl font-bold">
+        Kevin Haeusler
+      </p>
+      <p class="text-center dark:text-gray-300 text-gray-700">
         Opensource Supporter, Hobby Gardener
       </p>
 

@@ -5,9 +5,9 @@
       :src="require(`~/assets/resources/banner/${article.banner}`)"
     />
     <article
-      class="block mb-20 mx-auto px-3 py-8 3xl:max-w-screen-xl bg-white shadow lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="dark:bg-tblack block mb-20 mx-auto px-3 py-8 3xl:max-w-screen-xl bg-white shadow lg:max-w-screen-sm xl:max-w-screen-lg"
     >
-      <div class="pl-5 text-gray-900 md:float-left">
+      <div class="pl-5 dark:text-gray-100 text-gray-900 md:float-left">
         <a href="/">Home /</a>
         <a href="/archive">Blog /</a>
         {{ article.title }}
@@ -15,7 +15,7 @@
         <p class="article-description text-yellow-600 font-mono">
           {{ article.description }}
         </p>
-        <ul class="toc text-gray-900">
+        <ul class="toc dark:text-gray-100 text-gray-900">
           <li
             v-for="link of article.toc"
             :key="link.id"
@@ -26,7 +26,7 @@
         </ul>
       </div>
       <div class="md:float-right">
-        <span class="text-gray-900"
+        <span class="dark:text-gray-100 text-gray-900"
           >created at: {{ formatDate(article.createdAt) }} <br />
           last updated at: {{ formatDate(article.updatedAt) }}</span
         >
@@ -37,11 +37,11 @@
         <button>tag</button>
       </div>
       <div class="clear-both"></div>
-      <div class="prose prose-green mt-2 max-w-none">
+      <div class="prose prose-green mt-2 max-w-none dark:text-gray-100">
         <h1>{{ article.title }}</h1>
         <nuxt-content :document="article" />
       </div>
-      <div class="align-left text-gray-900">
+      <div class="align-left dark:text-gray-100 text-gray-900">
         <a href="/">Home /</a>
         <a href="/archive">Blog /</a>
         {{ article.title }}
