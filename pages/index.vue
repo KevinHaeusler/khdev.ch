@@ -74,21 +74,7 @@ export default {
 </script>
 
 <style>
-body {
-  @apply text-gray-500 font-normal bg-gray-50;
-}
 
-h1 {
-  @apply dark:text-green-500 text-green-500 text-2xl font-bold md:text-3xl lg:text-4xl;
-}
-
-h2 {
-  @apply dark:text-green-500 text-green-500 text-xl font-semibold md:text-2xl lg:text-3xl;
-}
-
-h3 {
-  @apply dark:text-green-500 text-green-500 text-lg font-semibold md:text-xl lg:text-2xl;
-}
 
 @media (min-width: 1024px) and (max-width: 1100px) {
   .overflow {

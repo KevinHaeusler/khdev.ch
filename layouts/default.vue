@@ -10,10 +10,10 @@
     />
     <Sidebar
       v-if="$device.isDesktop"
-      class="dark:from-tblack dark:via-tblack dark:to-sblack fixed mt-14 h-full dark:text-white bg-white bg-gradient-to-b shadow lg:flex-initial lg:w-80"
+      class="dark:from-tblack dark:via-tblack dark:to-sblack fixed mt-14 h-full bg-white bg-gradient-to-b shadow lg:flex-initial lg:w-80"
     />
 
-    <Nuxt class="dark:bg-bgray pb-20 overflow-y-auto lg:flex-auto" />
+    <Nuxt class="dark:bg-bgray ml-80 pb-20 overflow-y-auto lg:flex-auto" />
 
     <Footer
       class="fixed bottom-0 p-3 w-screen h-14 text-center text-white bg-stars-inverted lg:flex-initial lg:pl-80"
@@ -39,6 +39,21 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+body {
+  @apply text-gray-700 dark:text-white font-normal bg-gray-50;
+}
+
+h1 {
+  @apply dark:text-green-500 text-green-500 text-2xl font-bold md:text-3xl lg:text-4xl;
+}
+
+h2 {
+  @apply dark:text-green-500 text-green-500 text-xl font-semibold md:text-2xl lg:text-3xl;
+}
+
+h3 {
+  @apply dark:text-green-500 text-green-500 text-lg font-semibold md:text-xl lg:text-2xl;
 }
 </style>
 

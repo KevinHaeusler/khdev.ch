@@ -1,19 +1,21 @@
 <template>
   <div>
     <img
-      class="banner shadow"
+      class="block m-auto mt-5 p-0 w-screen h-80 shadow lg:max-w-screen-sm xl:max-w-screen-lg"
       :src="require(`~/assets/resources/banner/${article.banner}`)"
     />
-    <article>
-      <div class="float-left">
+    <article
+      class="block mb-20 mx-auto px-3 py-8 bg-white shadow lg:max-w-screen-sm xl:max-w-screen-lg"
+    >
+      <div class="pl-5 text-gray-900 md:float-left">
         <a href="/">Home /</a>
         <a href="/archive">Blog /</a>
         {{ article.title }}
 
-        <p class="article-description text-gray-800 font-mono">
+        <p class="article-description text-yellow-600 font-mono">
           {{ article.description }}
         </p>
-        <ul class="toc">
+        <ul class="toc text-gray-900">
           <li
             v-for="link of article.toc"
             :key="link.id"
@@ -23,12 +25,12 @@
           </li>
         </ul>
       </div>
-      <div class="float-right">
-        <span class="article-description"
+      <div class="md:float-right">
+        <span class="text-gray-900"
           >created at: {{ formatDate(article.createdAt) }} <br />
           last updated at: {{ formatDate(article.updatedAt) }}</span
         >
-        <p class="article-description">Tags:</p>
+        <p class="text-gray-900">Tags:</p>
         <button>tag</button>
         <button>tag</button>
         <button>tag</button>
@@ -38,7 +40,7 @@
       <h1>{{ article.title }}</h1>
       <nuxt-content :document="article" />
 
-      <div class="align-left">
+      <div class="align-left text-gray-900">
         <a href="/">Home /</a>
         <a href="/archive">Blog /</a>
         {{ article.title }}
@@ -65,32 +67,12 @@ export default {
 </script>
 
 <style>
-article {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 30px;
-  margin-bottom: 84px;
-  width: 1400px;
-  background: white;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-}
-
 .icon.icon-link {
   background-image: url('~assets/svg/icon-hashtag.svg');
   display: inline-block;
   width: 20px;
   height: 20px;
   background-size: 20px 20px;
-}
-
-.banner {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  width: 1400px;
-  height: 300px;
-  padding: 0;
 }
 
 .tag {
@@ -107,28 +89,11 @@ article {
 
 .shiki {
   padding: 1rem;
+  overflow: scroll;
 }
-@media (max-width: 1024px) {
-  article {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 30px;
-    margin-bottom: 20px;
-    width: 100%;
-    background: white;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-  }
-  .banner {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    width: 100%;
-    object-fit: cover;
-    padding: 0;
-  }
-  .align-right {
-    float: left;
+@media (min-width: 2000px) {
+  .xl\:max-w-screen-lg {
+    max-width: 1280px;
   }
 }
 </style>
