@@ -13,7 +13,7 @@
       />
     </div>
 
-    <div class="author-description dark:text-white dark:bg-gray-900">
+    <div class="author-description dark:text-white">
       <span class="author-name">Kevin Haeusler</span>
       <span class="author-tagline">Opensource Supporter, Hobby Gardener </span>
       <div class="author-socials">

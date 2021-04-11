@@ -9,7 +9,13 @@ module.exports = {
         'stars-inverted':
           "url('~assets/resources/background/stars-inverted.webp')",
         'stars-author': "url('~assets/resources/background/stars-author.webp')"
-      })
+      }),
+      colors: {
+        tblack: '#131C25',
+        sblack: '#0E121B',
+        tgray: '#2F2F2F',
+        bgray: '#121212'
+      }
     }
   },
   variants: {

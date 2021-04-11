@@ -10,7 +10,7 @@
     />
     <Sidebar
       v-if="$device.isDesktop"
-      class="h-90vh z-10 dark:text-white dark:bg-gray-900 bg-white shadow lg:flex-initial lg:w-80"
+      class="h-90vh dark:from-tblack dark:via-tblack dark:to-sblack z-10 dark:text-white bg-white bg-gradient-to-b shadow lg:flex-initial lg:w-80"
     />
 
     <Nuxt class="h-90vh overflow-y-auto lg:flex-auto" />
