@@ -19,11 +19,29 @@ module.exports = {
         sblack: '#0E121B',
         tgray: '#2F2F2F',
         bgray: '#121212'
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              color: 'text-green-400'
+            },
+            h2: {
+              color: 'text-green-400'
+            },
+            h3: {
+              color: 'text-green-400'
+            }
+          }
+        }
       }
     }
   },
   variants: {
     extend: {}
   },
-  plugins: []
+  plugins: [
+    require('@tailwindcss/typography')
+    // ...
+  ]
 }

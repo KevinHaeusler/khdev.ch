@@ -44,15 +44,15 @@ body {
 }
 
 h1 {
-  @apply dark:text-green-500 text-green-500 text-2xl font-bold md:text-3xl lg:text-4xl;
+  @apply text-green-500 text-2xl font-bold md:text-3xl lg:text-4xl;
 }
 
 h2 {
-  @apply dark:text-green-500 text-green-500 text-xl font-semibold md:text-2xl lg:text-3xl;
+  @apply text-green-500 text-xl font-semibold md:text-2xl lg:text-3xl;
 }
 
 h3 {
-  @apply dark:text-green-500 text-green-500 text-lg font-semibold md:text-xl lg:text-2xl;
+  @apply text-green-500 text-lg font-semibold md:text-xl lg:text-2xl;
 }
 </style>
 

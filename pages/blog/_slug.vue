@@ -37,9 +37,10 @@
         <button>tag</button>
       </div>
       <div class="clear-both"></div>
-      <h1>{{ article.title }}</h1>
-      <nuxt-content :document="article" />
-
+      <div class="prose prose-green mt-2 max-w-none">
+        <h1>{{ article.title }}</h1>
+        <nuxt-content :document="article" />
+      </div>
       <div class="align-left text-gray-900">
         <a href="/">Home /</a>
         <a href="/archive">Blog /</a>

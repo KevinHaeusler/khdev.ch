@@ -1,11 +1,10 @@
 <template>
-  <div class="">
+  <div>
     <div
-      class="dark:bg-tblack mb-5 pb-5 pt-20 px-5 w-screen 3xl:max-w-screen-xl dark:text-gray-100 bg-white shadow lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="dark:bg-tblack prose prose-green mb-5 pb-5 pt-20 px-5 w-screen max-w-none 3xl:max-w-screen-xl dark:text-gray-100 bg-white shadow lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
     >
       <h1>Welcome to KHDev</h1>
       <p>Thank you for visiting my website.</p>
-      <br />
       <p>
         This is a space for me to write down thoughts and experiences that I
         gained while working on my own projects. This website was created in
@@ -13,7 +12,7 @@
         still a work in progress, see the ToDo in the sidebar for what is
         missing. (ToDo is also still missing).
       </p>
-      <br /><br />
+
       <p>
         If you are interested in sporadic cooking and gardening pictures feel
         free to check out kevinhaeusler.com!
@@ -38,7 +37,7 @@
             Kevin Haeusler | {{ formatDate(article.createdAt) }}
           </p>
           <nuxt-content
-            class="overflow whitespace-no-wrap pb-5 dark:text-gray-100"
+            class="overflow whitespace-no-wrap prose prose-green pb-5 max-w-none dark:text-gray-100"
             :document="{ body: article.excerpt }"
           />
           <button class="float-left px-4 py-2 text-white bg-purple-900 shadow">

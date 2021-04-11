@@ -2,106 +2,111 @@
   <div>
     <div class="pb-5 bg-stars-inverted">
       <img
-        class="logo-image"
+        class=""
         src="~/assets/resources/logo/khdev-logo-white.webp"
         alt="KHDev Logo White"
       />
       <img
-        class="author-image mx-auto my-5 border-4 border-white rounded-full"
+        class="mx-auto my-5 border-4 hover:border-green-400 border-white rounded-full"
         src="~/assets/resources/author/kevin_haeusler.png"
         alt="Kevin Haeusler"
       />
     </div>
 
-    <div class="author-description dark:text-white">
-      <span class="author-name">Kevin Haeusler</span>
-      <span class="author-tagline">Opensource Supporter, Hobby Gardener </span>
-      <div class="author-socials">
-        <a href="mailto:mail@khdev.ch/"> eMail |</a>
+    <div class="mt-5 dark:text-white">
+      <p class="text-center text-gray-900 text-3xl font-bold">Kevin Haeusler</p>
+      <p class="text-center text-gray-700">
+        Opensource Supporter, Hobby Gardener
+      </p>
+
+      <div class="text-center text-green-500">
+        <a class="hover:text-green-400" href="mailto:mail@khdev.ch/">
+          eMail |</a
+        >
         <a
+          class="hover:text-green-400"
           href="https://discordapp.com/users/120560434263621634"
           target="_blank"
         >
           Discord |</a
         >
-        <a href="https://github.com/KevinHaeusler/" target="_blank">
+        <a
+          class="hover:text-green-400"
+          href="https://github.com/KevinHaeusler/"
+          target="_blank"
+        >
           Github |</a
         >
         <a
+          class="hover:text-green-400"
           href="https://www.linkedin.com/in/kevin-haeusler-3b1a12b2/"
           target="_blank"
         >
           LinkedIn
         </a>
       </div>
+      <div class="ml-5 mt-5 text-justify">
+        <nuxt-link class="hover:text-green-400" to="/">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="inline-flex mb-1 w-5 h-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+            />
+          </svg>
+          <span class="inline-flex">Home</span>
+        </nuxt-link>
+        <br />
+        <nuxt-link class="hover:text-green-400" to="/archive">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="inline-flex mb-1 w-5 h-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
+              clip-rule="evenodd"
+            />
+            <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
+          </svg>
+          <span class="inline">Blog</span>
+        </nuxt-link>
+        <br />
+        <nuxt-link class="hover:text-green-400" to="/about">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="inline-flex mb-1 w-5 h-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span class="inline">About</span>
+        </nuxt-link>
+      </div>
+      <br />
+      <button class="fixed bottom-0 mb-16 ml-72 hover:text-green-400">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+          />
+        </svg>
+      </button>
     </div>
-
-    <nuxt-link to="/">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="inline w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path d="M12 14l9-5-9-5-9 5 9 5z" />
-        <path
-          d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-        />
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-        />
-      </svg>
-      <span class="inline">Home</span>
-    </nuxt-link>
-    <br />
-    <nuxt-link to="/archive">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="inline w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path d="M12 14l9-5-9-5-9 5 9 5z" />
-        <path
-          d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-        />
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-        />
-      </svg>
-      <span class="inline">Blog</span>
-    </nuxt-link>
-    <br />
-    <nuxt-link to="/about">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="inline w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path d="M12 14l9-5-9-5-9 5 9 5z" />
-        <path
-          d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-        />
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-        />
-      </svg>
-      <span class="inline">About</span>
-    </nuxt-link>
-    <button class="fixed bottom-0">Toggle</button>
   </div>
 </template>
 
