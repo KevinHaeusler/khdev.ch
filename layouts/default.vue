@@ -1,22 +1,22 @@
 <template>
-  <div class="flex flex-col bg-gray-50 lg:flex-row lg:flex-wrap">
+  <div class="flex flex-col lg:flex-row lg:flex-wrap">
     <HeaderMobile
       v-if="$device.isMobileOrTablet"
-      class="h-5vh p-3 w-screen text-center text-white bg-stars lg:flex-initial lg:pl-80"
+      class="p-3 w-screen h-20 text-center text-white bg-stars lg:flex-initial lg:pl-80"
     />
     <Header
       v-if="$device.isDesktop"
-      class="h-5vh p-3 w-screen text-center text-white bg-stars lg:flex-initial lg:pl-80"
+      class="sticky z-10 top-0 p-3 w-screen h-14 text-center text-white bg-stars lg:flex-initial lg:pl-80"
     />
     <Sidebar
       v-if="$device.isDesktop"
-      class="h-90vh dark:from-tblack dark:via-tblack dark:to-sblack z-10 dark:text-white bg-white bg-gradient-to-b shadow lg:flex-initial lg:w-80"
+      class="dark:from-tblack dark:via-tblack dark:to-sblack fixed mt-14 h-full dark:text-white bg-white bg-gradient-to-b shadow lg:flex-initial lg:w-80"
     />
 
-    <Nuxt class="h-90vh overflow-y-auto lg:flex-auto" />
+    <Nuxt class="dark:bg-bgray pb-20 overflow-y-auto lg:flex-auto" />
 
     <Footer
-      class="h-5vh p-3 w-screen text-center text-white bg-stars-inverted lg:flex-initial lg:pl-80"
+      class="fixed bottom-0 p-3 w-screen h-14 text-center text-white bg-stars-inverted lg:flex-initial lg:pl-80"
     />
   </div>
 </template>
@@ -39,15 +39,6 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
-}
-
-@media (min-width: 1024px) {
-  .h-5vh {
-    height: 5vh;
-  }
-  .h-90vh {
-    height: 90vh;
-  }
 }
 </style>
 

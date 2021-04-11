@@ -101,7 +101,7 @@
       </svg>
       <span class="inline">About</span>
     </nuxt-link>
-    <button>Toggle</button>
+    <button class="fixed bottom-0">Toggle</button>
   </div>
 </template>
 

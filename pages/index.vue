@@ -1,5 +1,5 @@
 <template>
-  <div class="dark:bg-bgray">
+  <div class="">
     <div
       class="dark:bg-tblack mb-5 pb-5 pt-20 px-5 w-screen dark:text-gray-100 bg-white shadow lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
     >
@@ -75,14 +75,21 @@ export default {
 
 <style>
 body {
-  @apply text-gray-500 font-normal;
+  @apply text-gray-500 font-normal bg-gray-50;
 }
+
 h1 {
   @apply dark:text-green-500 text-green-500 text-2xl font-bold md:text-3xl lg:text-4xl;
 }
+
 h2 {
-  @apply text-gray-800 text-xl font-medium;
+  @apply dark:text-green-500 text-green-500 text-xl font-semibold md:text-2xl lg:text-3xl;
 }
+
+h3 {
+  @apply dark:text-green-500 text-green-500 text-lg font-semibold md:text-xl lg:text-2xl;
+}
+
 @media (min-width: 1024px) and (max-width: 1100px) {
   .overflow {
     width: 200px;
