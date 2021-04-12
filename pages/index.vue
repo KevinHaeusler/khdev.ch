@@ -1,9 +1,10 @@
 <template>
   <div>
     <div
-      class="dark:bg-darkmodediv prose prose-green mb-5 pb-5 pt-20 px-5 w-screen max-w-none 3xl:max-w-screen-xl dark:text-gray-100 bg-white shadow lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="dark:bg-darkmodediv mb-5 pb-5 pt-20 px-5 w-screen 3xl:max-w-screen-xl dark:text-gray-100 bg-white shadow lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
     >
       <h1>Welcome to KHDev</h1>
+      <div class="max-w-none prose prose-green ">
       <p>Thank you for visiting my website.</p>
       <p>
         This is a space for me to write down thoughts and experiences that I
@@ -17,6 +18,7 @@
         If you are interested in sporadic cooking and gardening pictures feel
         free to check out kevinhaeusler.com!
       </p>
+      </div>
     </div>
     <div
       class="dark:bg-darkmodediv mb-5 3xl:max-w-screen-xl bg-white shadow md:h-80 lg:m-auto lg:mb-5 lg:max-w-screen-sm xl:max-w-screen-lg"
