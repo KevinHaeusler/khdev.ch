@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="pb-5 bg-stars-inverted">
+    <div class="pb-5 bg-stars-inverted dark:bg-darkmodebgimg dark:shadow">
       <img
         class=""
         src="~/assets/resources/logo/khdev-logo-white.webp"

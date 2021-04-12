@@ -1,21 +1,21 @@
 <template>
   <div class="flex flex-col lg:flex-row lg:flex-wrap">
     <Header
-      class="sticky z-10 top-0 p-3 w-screen h-14 text-center text-white bg-stars lg:flex-initial lg:pl-80"
+      class="sticky z-10 top-0 p-3 w-screen h-14 text-center text-white bg-stars lg:flex-initial lg:pl-80 dark:border dark:border-bgray dark:bg-darkmodebgimg "
     />
     <HeaderMobile
       v-if="$vssWidth <= 768"
-      class="p-3 h-20 text-center bg-stars"
+      class="p-3 h-20 text-center bg-stars dark:bg-darkmodebgimg  "
     />
     <Sidebar
       v-else
-      class="dark:from-tblack dark:via-tblack dark:to-sblack fixed mt-14 h-full bg-white bg-gradient-to-b shadow lg:flex-initial lg:w-80"
+      class="dark:bg-darkmodebgimg fixed mt-14 h-full bg-white dark:border-bgray dark:bg-darkmodebgimg dark:border shadow lg:flex-initial lg:w-80"
     />
 
-    <Nuxt class="dark:bg-bgray pb-20 overflow-y-auto lg:flex-auto lg:ml-80" />
+    <Nuxt class="dark:bg-darkmodebg pb-20 overflow-y-auto lg:flex-auto lg:ml-80" />
 
     <Footer
-      class="fixed bottom-0 p-3 w-screen h-14 text-center text-white bg-stars-inverted lg:flex-initial lg:pl-80"
+      class="fixed bottom-0 p-3 w-screen h-14 text-center text-white bg-stars-inverted dark:bg-darkmodebgimg lg:flex-initial lg:pl-80 dark:border dark:border-bgray"
     />
   </div>
 </template>

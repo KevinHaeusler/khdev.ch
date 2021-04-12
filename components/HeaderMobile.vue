@@ -44,12 +44,12 @@
       </div>
     </transition>
     <aside
-      class="dark:from-tblack dark:via-tblack dark:to-sblack fixed z-30 left-0 top-0 w-64 h-full bg-white bg-gradient-to-b overflow-auto transform transition-all duration-300 ease-in-out"
+      class="dark:bg-darkmodebg fixed z-30 left-0 top-0 w-64 h-full bg-white  overflow-auto transform transition-all duration-300 ease-in-out"
       :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
     >
       <span
         @click="isOpen = false"
-        class="flex items-center p-4 w-full h-20 bg-stars-author shadow"
+        class="flex items-center p-4 w-full h-20 bg-stars-author dark:bg-darkmodebgimg shadow"
       >
         <img
           src="~/assets/resources/logo/khdev-logo-white.webp"

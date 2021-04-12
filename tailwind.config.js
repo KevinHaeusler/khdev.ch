@@ -12,13 +12,16 @@ module.exports = {
 
         'stars-inverted':
           "url('~assets/resources/background/stars-inverted.webp')",
-        'stars-author': "url('~assets/resources/background/stars-author.webp')"
+        'stars-author': "url('~assets/resources/background/stars-author.webp')",
+        'darkmodebgimg': "url('~assets/resources/background/darkmodebg.webp')" 
       }),
       colors: {
         tblack: '#131C25',
         sblack: '#0E121B',
         tgray: '#2F2F2F',
-        bgray: '#121212'
+        bgray: '#121212',
+        darkmodediv: '#272727',
+        darkmodebg: '#202020',
       },
       typography: {
         DEFAULT: {
