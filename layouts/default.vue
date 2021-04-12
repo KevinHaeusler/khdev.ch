@@ -9,7 +9,7 @@
     />
     <Sidebar
       v-else
-      class="dark:bg-darkmodebgimg fixed mt-14 h-full bg-white dark:border-bgray dark:bg-darkmodebgimg dark:border shadow lg:flex-initial lg:w-80"
+      class="dark:bg-darkmodebgimg fixed mt-14 h-full bg-white dark:border-bgray  dark:border shadow lg:flex-initial lg:w-80"
     />
 
     <Nuxt class="dark:bg-darkmodebg pb-20 overflow-y-auto lg:flex-auto lg:ml-80" />

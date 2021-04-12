@@ -5,7 +5,7 @@
       :src="require(`~/assets/resources/banner/${article.banner}`)"
     />
     <article
-      class="dark:bg-tblack block mb-20 mx-auto px-3 py-8 3xl:max-w-screen-xl bg-white shadow lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="dark:bg-darkmodediv block mb-20 mx-auto px-3 py-8 3xl:max-w-screen-xl bg-white shadow lg:max-w-screen-sm xl:max-w-screen-lg"
     >
       <div class="pl-5 dark:text-gray-100 text-gray-900 md:float-left">
         <a href="/">Home /</a>
