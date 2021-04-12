@@ -14,7 +14,8 @@
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
     "nuxt-ssr-screen-size": "github:hugojerez/nuxt-ssr-screen-size",
-    "shiki": "^0.9.3"
+    "shiki": "^0.9.3",
+    "vue-gtag": "^1.12.0"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.5",
