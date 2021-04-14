@@ -7,17 +7,17 @@
         alt="KHDev Logo White"
       />
       <img
-        class="mx-auto my-5 border-4 hover:border-green-400 border-white rounded-full"
+        class="mx-auto my-5 border-4 border-white rounded-full hover:border-green-400"
         src="~/assets/resources/author/kevin_haeusler.png"
         alt="Kevin Haeusler"
       />
     </div>
 
     <div class="mt-5 dark:text-white">
-      <p class="text-center text-gray-900 dark:text-white text-3xl font-bold">
+      <p class="text-3xl font-bold text-center text-gray-900 dark:text-white">
         Kevin Haeusler
       </p>
-      <p class="text-center dark:text-gray-300 text-gray-700">
+      <p class="text-center text-gray-700 dark:text-gray-300">
         Opensource Supporter, Hobby Gardener
       </p>
 
@@ -47,11 +47,11 @@
           LinkedIn
         </a>
       </div>
-      <div class="ml-5 mt-5 text-justify">
+      <div class="mt-5 ml-5 text-justify">
         <nuxt-link class="hover:text-green-400" to="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="inline-flex mb-1 w-5 h-5"
+            class="inline-flex w-5 h-5 mb-1"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -65,7 +65,7 @@
         <nuxt-link class="hover:text-green-400" to="/archive">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="inline-flex mb-1 w-5 h-5"
+            class="inline-flex w-5 h-5 mb-1"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -82,7 +82,7 @@
         <nuxt-link class="hover:text-green-400" to="/about">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="inline-flex mb-1 w-5 h-5"
+            class="inline-flex w-5 h-5 mb-1"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -98,8 +98,8 @@
       <br />
 
       <button
-        @click="toggle"
         class="fixed bottom-0 mb-16 ml-72 hover:text-green-400"
+        @click="toggle"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +121,7 @@ export default {
   methods: {
     toggle() {
       this.$colorMode.preference =
-        this.$colorMode.value == 'light' ? 'dark' : 'light'
+        this.$colorMode.value === 'light' ? 'dark' : 'light'
     }
   }
 }
