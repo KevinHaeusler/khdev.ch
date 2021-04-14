@@ -1,24 +1,33 @@
 <template>
   <div class="flex flex-col lg:flex-row lg:flex-wrap">
     <Header
-      class="sticky z-10 top-0 p-3 w-screen h-14 text-center text-white bg-stars lg:flex-initial lg:pl-80 dark:border dark:border-bgray dark:bg-darkmodebgimg "
+      class="sticky top-0 z-10 w-screen p-3 text-center text-white h-14 bg-stars lg:flex-initial lg:pl-80 dark:border dark:border-bgray dark:bg-darkmodebgimg"
     />
     <HeaderMobile
       v-if="$vssWidth <= 768"
-      class="p-3 h-20 text-center bg-stars dark:bg-darkmodebgimg  "
+      class="h-20 p-3 text-center bg-stars dark:bg-darkmodebgimg"
     />
     <Sidebar
       v-else
-      class="dark:bg-darkmodebgimg fixed mt-14 h-full bg-white dark:border-bgray  dark:border shadow lg:flex-initial lg:w-80"
+      class="fixed h-full bg-white shadow dark:bg-darkmodebgimg mt-14 dark:border-bgray dark:border lg:flex-initial lg:w-80"
     />
 
-    <Nuxt class="dark:bg-darkmodebg pb-20 overflow-y-auto lg:flex-auto lg:ml-80" />
+    <Nuxt
+      class="pb-20 overflow-y-auto dark:bg-darkmodebg lg:flex-auto lg:ml-80"
+    />
 
     <Footer
-      class="fixed bottom-0 p-3 w-screen h-14 text-center text-white bg-stars-inverted dark:bg-darkmodebgimg lg:flex-initial lg:pl-80 dark:border dark:border-bgray"
+      class="fixed bottom-0 w-screen p-3 text-center text-white h-14 bg-stars-inverted dark:bg-darkmodebgimg lg:flex-initial lg:pl-80 dark:border dark:border-bgray"
     />
   </div>
 </template>
+
+<script>
+import NuxtSSRScreenSize from 'nuxt-ssr-screen-size'
+export default {
+  mixins: [NuxtSSRScreenSize.NuxtSSRScreenSizeMixin]
+}
+</script>
 
 <style>
 html {
@@ -55,10 +64,3 @@ h3 {
   @apply text-green-500 text-lg font-semibold md:text-xl lg:text-2xl;
 }
 </style>
-
-<script>
-import NuxtSSRScreenSize from 'nuxt-ssr-screen-size'
-export default {
-  mixins: [NuxtSSRScreenSize.NuxtSSRScreenSizeMixin]
-}
-</script>

@@ -1,21 +1,21 @@
 <template>
   <div>
     <img
-      class="block m-auto mt-5 p-0 w-screen 3xl:max-w-screen-xl h-80 shadow lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="block w-screen p-0 m-auto mt-5 shadow 3xl:max-w-screen-xl h-80 lg:max-w-screen-sm xl:max-w-screen-lg"
       :src="require(`~/assets/resources/banner/${article.banner}`)"
     />
     <article
-      class="dark:bg-darkmodediv block mb-20 mx-auto px-3 py-8 3xl:max-w-screen-xl bg-white shadow lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="block px-3 py-8 mx-auto mb-20 bg-white shadow dark:bg-darkmodediv 3xl:max-w-screen-xl lg:max-w-screen-sm xl:max-w-screen-lg"
     >
-      <div class="pl-5 dark:text-gray-100 text-gray-900 md:float-left">
+      <div class="pl-5 text-gray-900 dark:text-gray-100 md:float-left">
         <a href="/">Home /</a>
         <a href="/archive">Blog /</a>
         {{ article.title }}
 
-        <p class="article-description text-yellow-600 font-mono">
+        <p class="font-mono text-yellow-600 article-description">
           {{ article.description }}
         </p>
-        <ul class="toc dark:text-gray-100 text-gray-900">
+        <ul class="text-gray-900 toc dark:text-gray-100">
           <li
             v-for="link of article.toc"
             :key="link.id"
@@ -26,7 +26,7 @@
         </ul>
       </div>
       <div class="md:float-right">
-        <span class="dark:text-gray-100 text-gray-900"
+        <span class="text-gray-900 dark:text-gray-100"
           >created at: {{ formatDate(article.createdAt) }} <br />
           last updated at: {{ formatDate(article.updatedAt) }}</span
         >
@@ -37,11 +37,11 @@
         <button>tag</button>
       </div>
       <div class="clear-both"></div>
-      <div class="prose prose-green mt-2 max-w-none dark:text-gray-100">
+      <div class="mt-2 prose prose-green max-w-none dark:text-gray-100">
         <h1>{{ article.title }}</h1>
         <nuxt-content :document="article" />
       </div>
-      <div class="align-left dark:text-gray-100 text-gray-900">
+      <div class="text-gray-900 align-left dark:text-gray-100">
         <a href="/">Home /</a>
         <a href="/archive">Blog /</a>
         {{ article.title }}
@@ -52,6 +52,7 @@
 
 <script>
 export default {
+  scrollToTop: true,
   async asyncData({ $content, params }) {
     const article = await $content('blog', params.slug).fetch()
 
@@ -62,8 +63,7 @@ export default {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
     }
-  },
-  scrollToTop: true
+  }
 }
 </script>
 

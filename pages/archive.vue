@@ -1,15 +1,15 @@
 <template>
   <div>
     <div
-      class="dark:bg-darkmodediv prose prose-green mb-5 pb-5 pt-20 px-5 w-screen max-w-none 3xl:max-w-screen-xl dark:text-gray-100 bg-white shadow lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="w-screen px-5 pt-20 pb-5 mb-5 prose bg-white shadow dark:bg-darkmodediv prose-green max-w-none 3xl:max-w-screen-xl dark:text-gray-100 lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
     >
       <h1>Blog Archive</h1>
       <p>All posts sorted from last to first.</p>
     </div>
     <div
-      class="dark:bg-darkmodediv mb-5 3xl:max-w-screen-xl bg-white shadow md:h-80 lg:m-auto lg:mb-5 lg:max-w-screen-sm xl:max-w-screen-lg"
       v-for="article of articles"
       :key="article"
+      class="mb-5 bg-white shadow dark:bg-darkmodediv 3xl:max-w-screen-xl md:h-80 lg:m-auto lg:mb-5 lg:max-w-screen-sm xl:max-w-screen-lg"
     >
       <nuxt-link :to="{ name: 'blog-slug', params: { slug: article.slug } }">
         <img
@@ -18,14 +18,14 @@
         />
         <div class="p-5">
           <h1>{{ article.title }}</h1>
-          <p class="text-yellow-600 font-mono">
+          <p class="font-mono text-yellow-600">
             {{ article.description }}
           </p>
-          <p class="dark:text-gray-300 text-gray-800 font-mono lg:mb-5">
+          <p class="font-mono text-gray-800 dark:text-gray-300 lg:mb-5">
             Kevin Haeusler | {{ formatDate(article.createdAt) }}
           </p>
           <nuxt-content
-            class="overflow whitespace-no-wrap pb-5 dark:text-gray-100"
+            class="pb-5 whitespace-no-wrap overflow dark:text-gray-100"
             :document="{ body: article.excerpt }"
           />
           <button class="float-left px-4 py-2 text-white bg-purple-900 shadow">

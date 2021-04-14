@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed z-10 flex items-center justify-between px-6 w-full h-16 text-gray-700 dark:text-white bg-white"
+    class="fixed z-10 flex items-center justify-between w-full h-16 px-6 text-gray-700 bg-white dark:text-white"
   >
     <div class="flex items-center">
       <button class="mr-2" aria-label="Open Menu" @click="drawer">
@@ -32,42 +32,42 @@
       leave-to-class="opacity-0"
     >
       <div
-        @keydown.esc="isOpen = false"
         v-show="isOpen"
-        class="fixed z-10 inset-0 transition-opacity"
+        class="fixed inset-0 z-10 transition-opacity"
+        @keydown.esc="isOpen = false"
       >
         <div
-          @click="isOpen = false"
           class="absolute inset-0 bg-black opacity-50"
           tabindex="0"
+          @click="isOpen = false"
         ></div>
       </div>
     </transition>
     <aside
-      class="dark:bg-darkmodebg fixed z-30 left-0 top-0 w-64 h-full bg-white  overflow-auto transform transition-all duration-300 ease-in-out"
+      class="fixed top-0 left-0 z-30 w-64 h-full overflow-auto transition-all duration-300 ease-in-out transform bg-white dark:bg-darkmodebg"
       :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
     >
       <span
+        class="flex items-center w-full h-20 p-4 shadow bg-stars-author dark:bg-darkmodebgimg"
         @click="isOpen = false"
-        class="flex items-center p-4 w-full h-20 bg-stars-author dark:bg-darkmodebgimg shadow"
       >
         <img
           src="~/assets/resources/logo/khdev-logo-white.webp"
           alt="Logo"
-          class="mx-auto w-32 h-auto"
+          class="w-32 h-auto mx-auto"
         />
       </span>
 
       <span
-        @click="isOpen = false"
         class="flex items-center p-4 hover:text-white hover:bg-indigo-500"
+        @click="isOpen = false"
       >
       </span>
-      <div class="ml-5 mt-5 text-justify">
+      <div class="mt-5 ml-5 text-justify">
         <nuxt-link class="hover:text-green-400" to="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="inline-flex mb-1 w-5 h-5"
+            class="inline-flex w-5 h-5 mb-1"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -81,7 +81,7 @@
         <nuxt-link class="hover:text-green-400" to="/archive">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="inline-flex mb-1 w-5 h-5"
+            class="inline-flex w-5 h-5 mb-1"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -98,7 +98,7 @@
         <nuxt-link class="hover:text-green-400" to="/about">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="inline-flex mb-1 w-5 h-5"
+            class="inline-flex w-5 h-5 mb-1"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -112,11 +112,11 @@
         </nuxt-link>
       </div>
 
-      <div class="fixed bottom-0 mb-5 w-full">
-        <button @click="toggle" class="hover:text-green-400">
+      <div class="fixed bottom-0 w-full mb-5">
+        <button class="hover:text-green-400" @click="toggle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="inline-flex mb-1 w-5 h-5"
+            class="inline-flex w-5 h-5 mb-1"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -138,15 +138,6 @@ export default {
       isOpen: false
     }
   },
-  methods: {
-    drawer() {
-      this.isOpen = !this.isOpen
-    },
-    toggle() {
-      this.$colorMode.preference =
-        this.$colorMode.value == 'light' ? 'dark' : 'light'
-    }
-  },
   watch: {
     isOpen: {
       immediate: true,
@@ -160,8 +151,17 @@ export default {
   },
   mounted() {
     document.addEventListener('keydown', (e) => {
-      if (e.keyCode == 27 && this.isOpen) this.isOpen = false
+      if (e.keyCode === 27 && this.isOpen) this.isOpen = false
     })
+  },
+  methods: {
+    drawer() {
+      this.isOpen = !this.isOpen
+    },
+    toggle() {
+      this.$colorMode.preference =
+        this.$colorMode.value === 'light' ? 'dark' : 'light'
+    }
   }
 }
 </script>
