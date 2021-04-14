@@ -10,8 +10,10 @@
           This is a space for me to write down thoughts and experiences that I
           gained while working on my own projects. This website was created in
           Nuxt.js with Nuxt-Content and Tailwindcss. This site is currently
-          still a work in progress, see the ToDo in the sidebar for what is
-          missing. (ToDo is also still missing).
+          still a work in progress ToDo: Create an actual ToDo page, create
+          taxonomy, optimize images (especially scaling/resizing for mobile),
+          add projects (kinda like posts but more like card style with a link to
+          github/projectpage and a short description) and add more posts.
         </p>
 
         <p>
