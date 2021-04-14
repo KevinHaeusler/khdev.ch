@@ -1,29 +1,29 @@
 <template>
   <div>
     <div
-      class="dark:bg-darkmodediv mb-5 pb-5 pt-20 px-5 w-screen 3xl:max-w-screen-xl bg-white shadow lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="w-screen px-5 pt-20 pb-5 mb-5 bg-white shadow dark:bg-darkmodediv 3xl:max-w-screen-xl lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
     >
       <h1>Welcome to KHDev</h1>
-      <div class="max-w-none prose prose-green dark:text-gray-100">
-      <p>Thank you for visiting my website.</p>
-      <p>
-        This is a space for me to write down thoughts and experiences that I
-        gained while working on my own projects. This website was created in
-        Nuxt.js with Nuxt-Content and Ant Design Vue. This site is currently
-        still a work in progress, see the ToDo in the sidebar for what is
-        missing. (ToDo is also still missing).
-      </p>
+      <div class="prose max-w-none prose-green dark:text-gray-100">
+        <p>Thank you for visiting my website.</p>
+        <p>
+          This is a space for me to write down thoughts and experiences that I
+          gained while working on my own projects. This website was created in
+          Nuxt.js with Nuxt-Content and Tailwindcss. This site is currently
+          still a work in progress, see the ToDo in the sidebar for what is
+          missing. (ToDo is also still missing).
+        </p>
 
-      <p>
-        If you are interested in sporadic cooking and gardening pictures feel
-        free to check out kevinhaeusler.com!
-      </p>
+        <p>
+          If you are interested in sporadic cooking and gardening pictures feel
+          free to check out kevinhaeusler.com!
+        </p>
       </div>
     </div>
     <div
-      class="dark:bg-darkmodediv mb-5 3xl:max-w-screen-xl bg-white shadow md:h-80 lg:m-auto lg:mb-5 lg:max-w-screen-sm xl:max-w-screen-lg"
       v-for="article of articles"
       :key="article"
+      class="mb-5 bg-white shadow dark:bg-darkmodediv 3xl:max-w-screen-xl md:h-80 lg:m-auto lg:mb-5 lg:max-w-screen-sm xl:max-w-screen-lg"
     >
       <nuxt-link :to="{ name: 'blog-slug', params: { slug: article.slug } }">
         <img
@@ -32,17 +32,19 @@
         />
         <div class="p-5">
           <h1>{{ article.title }}</h1>
-          <p class="text-yellow-600 font-mono">
+          <p class="font-mono text-yellow-600">
             {{ article.description }}
           </p>
-          <p class="dark:text-gray-300 text-gray-800 font-mono lg:mb-5">
+          <p class="font-mono text-gray-800 dark:text-gray-300 lg:mb-5">
             Kevin Haeusler | {{ formatDate(article.createdAt) }}
           </p>
           <nuxt-content
-            class="overflow whitespace-no-wrap prose prose-green pb-5 max-w-none dark:text-gray-100"
+            class="pb-5 prose whitespace-no-wrap overflow prose-green max-w-none dark:text-gray-100"
             :document="{ body: article.excerpt }"
           />
-          <button class="float-left px-4 py-2 text-white bg-purple-900 hover:bg-purple-600 shadow">
+          <button
+            class="float-left px-4 py-2 text-white bg-purple-900 shadow hover:bg-purple-600"
+          >
             Read more
           </button>
           <p class="float-right">Tags</p>
