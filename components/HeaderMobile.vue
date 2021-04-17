@@ -18,6 +18,8 @@
       </button>
       <img
         src="~/assets/resources/logo/khdev-logo-white.webp"
+        width="96px"
+        height="32px"
         alt="Logo"
         class="w-24 h-auto"
       />
@@ -54,6 +56,8 @@
         <img
           src="~/assets/resources/logo/khdev-logo-white.webp"
           alt="Logo"
+          width="128px"
+          height="42px"
           class="w-32 h-auto mx-auto"
         />
       </span>
