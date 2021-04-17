@@ -9,6 +9,8 @@
       <img
         class="mx-auto my-5 border-4 border-white rounded-full hover:border-green-400"
         src="~/assets/resources/author/kevin_haeusler.png"
+        height="250px"
+        width="250px"
         alt="Kevin Haeusler"
       />
     </div>

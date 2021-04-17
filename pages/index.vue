@@ -31,6 +31,8 @@
         <img
           class="w-screen shadow md:float-left md:mr-5 md:w-80 md:h-80"
           :src="require(`~/assets/resources/thumbnail/${article.img}`)"
+          width="320px"
+          height="320px"
         />
         <div class="p-5">
           <h1>{{ article.title }}</h1>

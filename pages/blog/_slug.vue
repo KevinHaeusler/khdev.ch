@@ -1,7 +1,7 @@
 <template>
   <div>
     <img
-      class="block w-screen p-0 m-auto mt-5 shadow 3xl:max-w-screen-xl h-80 lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="block object-cover w-screen p-0 m-auto mt-5 shadow 3xl:max-w-screen-xl h-80 lg:max-w-screen-sm xl:max-w-screen-lg"
       :src="require(`~/assets/resources/banner/${article.banner}`)"
     />
     <article
