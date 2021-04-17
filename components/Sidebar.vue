@@ -2,8 +2,9 @@
   <div>
     <div class="pb-5 bg-stars-inverted dark:bg-darkmodebgimg dark:shadow">
       <img
-        class=""
         src="~/assets/resources/logo/khdev-logo-white.webp"
+        height="106px"
+        width="320px"
         alt="KHDev Logo White"
       />
       <img

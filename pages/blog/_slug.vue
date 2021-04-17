@@ -3,6 +3,8 @@
     <img
       class="block object-cover w-screen p-0 m-auto mt-5 shadow 3xl:max-w-screen-xl h-80 lg:max-w-screen-sm xl:max-w-screen-lg"
       :src="require(`~/assets/resources/banner/${article.banner}`)"
+      width="1280px"
+      height="320px"
     />
     <article
       class="block px-3 py-8 mx-auto mb-20 bg-white shadow dark:bg-darkmodediv 3xl:max-w-screen-xl lg:max-w-screen-sm xl:max-w-screen-lg"
