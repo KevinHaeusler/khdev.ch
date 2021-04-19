@@ -1,6 +1,6 @@
 ---
 title: test
-description: Nuxt + Nuxt-Content + TailwindCSS Website
+description: https://khdev.ch
 slug: test
 img: khdev.webp
 banner: nuxtjs.webp

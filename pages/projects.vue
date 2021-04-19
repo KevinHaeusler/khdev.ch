@@ -1,4 +1,4 @@
-<template></template>
+<template><div class="text-center">todo</div></template>
 
 <script>
 export default {}
