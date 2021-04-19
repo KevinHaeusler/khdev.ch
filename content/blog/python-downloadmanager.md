@@ -8,7 +8,7 @@ createdAt: 2021-04-04
 updatedAt: 2021-04-07
 ---
 
-One thing that helped me when I was learning python was to create small but usefull scripts to confirm what I have learned. This is a script that sorts files into different folders based on their filetype. It is not perfect but does the job.
+One thing that helped me when I was learning python was to create small but useful scripts to confirm what I have learned. This is a script that sorts files into different folders based on their filetype. It is not perfect but does the job.
 
 <!--more-->
 
