@@ -45,7 +45,7 @@
       </div>
       <div class="text-gray-900 align-left dark:text-gray-100">
         <a href="/">Home /</a>
-        <a href="/archive">Blog /</a>
+        <a href="/projects-archive">Projects /</a>
         {{ project.title }}
       </div>
     </project>
