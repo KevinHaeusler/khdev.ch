@@ -3,7 +3,7 @@
     <div
       class="w-screen px-5 pt-20 pb-5 mb-5 bg-white shadow dark:bg-darkmodediv 3xl:max-w-screen-xl lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
     >
-      <h1>Welcome to KHDev</h1>
+      <h1>KHDev an AI & ML | Python | Webdev Blog</h1>
       <div class="prose max-w-none prose-green dark:text-gray-100">
         <p>Thank you for visiting my website.</p>
         <p>
@@ -31,11 +31,12 @@
         <img
           class="w-screen shadow md:float-left md:mr-5 md:w-80 md:h-80"
           :src="require(`~/assets/resources/thumbnail/${article.img}`)"
+          :alt="article.alt"
           width="320px"
           height="320px"
         />
         <div class="p-5">
-          <h1>{{ article.title }}</h1>
+          <h2>{{ article.title }}</h2>
           <p class="font-mono text-yellow-600">
             {{ article.description }}
           </p>
@@ -63,7 +64,15 @@
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content('blog', params.slug)
-      .only(['title', 'description', 'excerpt', 'slug', 'img', 'createdAt'])
+      .only([
+        'title',
+        'description',
+        'excerpt',
+        'slug',
+        'img',
+        'alt',
+        'createdAt'
+      ])
       .sortBy('createdAt', 'desc')
       .fetch()
 

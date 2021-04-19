@@ -3,6 +3,7 @@ title: Python Download Manager
 description: Organizing files with python
 slug: python-downloadmanager
 img: python.webp
+alt: python
 banner: python.webp
 createdAt: 2021-04-04
 updatedAt: 2021-04-07

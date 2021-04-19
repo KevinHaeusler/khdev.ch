@@ -4,6 +4,7 @@ description: Creating a website with Nuxt-Content
 slug: creating-khdev
 img: nuxtjs.webp
 banner: nuxtjs.webp
+alt: nuxtjs
 tags: nuxt, nuxt-content, khdev
 createdAt: 2021-04-03
 updatedAt: 2021-04-06

@@ -4,6 +4,7 @@ description: Examples, guides and more
 slug: useful-nuxt-resources
 img: nuxtjs.webp
 banner: nuxtjs.webp
+alt: nuxtjs
 tags: nuxt, nuxt-content
 createdAt: 2021-04-11
 updatedAt: 2021-04-11
