@@ -11,7 +11,7 @@
     >
       <div class="pl-5 text-gray-900 dark:text-gray-100 md:float-left">
         <a href="/">Home /</a>
-        <a href="/project">Projects /</a>
+        <a href="/projects-archive">Projects /</a>
         {{ project.title }}
 
         <p class="font-mono text-yellow-600 project-description">

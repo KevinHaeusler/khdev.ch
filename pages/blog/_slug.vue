@@ -11,7 +11,7 @@
     >
       <div class="pl-5 text-gray-900 dark:text-gray-100 md:float-left">
         <a href="/">Home /</a>
-        <a href="/archive">Blog /</a>
+        <a href="/blog-archive">Blog /</a>
         {{ article.title }}
 
         <p class="font-mono text-yellow-600 article-description">
