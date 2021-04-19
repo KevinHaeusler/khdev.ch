@@ -65,7 +65,7 @@
           <span class="inline-flex">Home</span>
         </nuxt-link>
         <br />
-        <nuxt-link class="hover:text-green-400" to="/projects">
+        <nuxt-link class="hover:text-green-400" to="/projects-archive">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="inline-flex w-5 h-5 mb-1"
@@ -84,7 +84,7 @@
           <span class="inline">Projects</span>
         </nuxt-link>
         <br />
-        <nuxt-link class="hover:text-green-400" to="/archive">
+        <nuxt-link class="hover:text-green-400" to="/blog-archive">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="inline-flex w-5 h-5 mb-1"
