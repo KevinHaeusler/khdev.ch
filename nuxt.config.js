@@ -17,7 +17,7 @@ export default {
     htmlAttrs: {
       lang: 'en-GB'
     },
-    title: 'AI & ML | Python | Webdev Blog',
+    title: 'KHDev an AI & ML | Python | Webdev Blog',
     meta: [
       ...meta,
       { charset: 'utf-8' },
@@ -39,7 +39,7 @@ export default {
       {
         hid: 'canonical',
         rel: 'canonical',
-        href: process.env.BASE_URL
+        href: 'https://khdev.ch'
       }
     ]
   },
@@ -93,7 +93,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   sitemap: {
-    hostname: process.env.BASE_URL,
+    hostname: 'https://khdev.ch',
     routes() {
       return getRoutes()
     }

@@ -1,6 +1,6 @@
 const type = 'website'
 const url = 'https://khdev.ch'
-const title = 'AI & ML | Python | Webdev Blog'
+const title = 'KHDev an AI & ML | Python | Webdev Blog'
 const description = 'Articles about AI & ML, Python, Webdev and more.'
 const mainImage = '/assets/resources/logo/khdev-logo-black.png'
 
