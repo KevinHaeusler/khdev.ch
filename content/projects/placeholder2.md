@@ -1,7 +1,7 @@
 ---
-title: test 2
+title: placeholder2
 description: https://khdev.ch
-slug: test2
+slug: placeholder2
 img: khdev.webp
 banner: nuxtjs.webp
 alt: khdev
