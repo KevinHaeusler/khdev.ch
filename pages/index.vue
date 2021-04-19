@@ -22,6 +22,51 @@
         </p>
       </div>
     </div>
+    <h2 class="mb-5 text-center">Latest Projects:</h2>
+    <div
+      class="grid xl:grid-cols-3 xl:gap-8 2xl:gap-8 3xl:gap-40 lg:max-w-screen-sm xl:max-w-screen-lg 3xl:max-w-screen-xl lg:m-auto"
+    >
+      <div
+        v-for="project of projects"
+        :key="project"
+        class="mb-5 bg-white shadow lg:w-80 dark:bg-darkmodediv lg:mb-5"
+      >
+        <nuxt-link
+          :to="{ name: 'projects-slug', params: { slug: project.slug } }"
+        >
+          <img
+            class="w-screen shadow md:float-left md:mr-5 md:w-80 md:h-80"
+            :src="require(`~/assets/resources/thumbnail/${project.img}`)"
+            :alt="project.alt"
+            width="320px"
+            height="320px"
+          />
+          <div class="p-5">
+            <h2>{{ project.title }}</h2>
+            <p class="font-mono text-yellow-600">
+              {{ project.description }}
+            </p>
+            <p class="font-mono text-gray-800 dark:text-gray-300 lg:mb-5">
+              Kevin Haeusler | {{ formatDate(project.createdAt) }}
+            </p>
+            <nuxt-content
+              class="pb-5 prose whitespace-no-wrap overflow prose-green max-w-none dark:text-gray-100"
+              :document="{ body: project.excerpt }"
+            />
+            <button
+              class="float-left px-4 py-2 text-white bg-purple-900 shadow hover:bg-purple-600"
+            >
+              Read more
+            </button>
+            <p class="float-right">Tags</p>
+            <div class="clear-both"></div>
+          </div>
+        </nuxt-link>
+      </div>
+    </div>
+
+    <h2 class="mb-5 text-center">Latest Blog posts:</h2>
+
     <div
       v-for="article of articles"
       :key="article"
@@ -76,8 +121,22 @@ export default {
       .sortBy('createdAt', 'desc')
       .fetch()
 
+    const projects = await $content('projects', params.slug)
+      .only([
+        'title',
+        'description',
+        'excerpt',
+        'slug',
+        'img',
+        'alt',
+        'createdAt'
+      ])
+      .sortBy('createdAt', 'desc')
+      .fetch()
+
     return {
-      articles
+      articles,
+      projects
     }
   },
   methods: {

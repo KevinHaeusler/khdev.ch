@@ -1,7 +1,7 @@
 ---
-title: khdev.ch
+title: test
 description: Nuxt + Nuxt-Content + TailwindCSS Website
-slug: khdev
+slug: test
 img: khdev.webp
 banner: nuxtjs.webp
 alt: khdev
@@ -10,6 +10,6 @@ createdAt: 2021-04-19
 updatedAt: 2021-04-19
 ---
 
-A website made with Nuxt + Nuxt-Content + TailwindCSS
+Temporary placeholder until I have 3 projects
 
 <!--more-->
