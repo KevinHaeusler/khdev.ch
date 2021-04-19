@@ -15,12 +15,12 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     htmlAttrs: {
-      lang: 'en-GB',
-      charset: 'utf-8'
+      lang: 'en-GB'
     },
     title: 'KHDev an AI & ML | Python | Webdev Blog',
     meta: [
       ...meta,
+      { charset: 'utf-8' },
       { name: 'HandheldFriendly', content: 'True' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { property: 'og:site_name', content: 'KHDev' },
