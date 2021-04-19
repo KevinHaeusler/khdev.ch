@@ -18,3 +18,8 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## Sizes for images
+
+Thumbnails: 412x412px
+Banners: 1280x320px
