@@ -2,7 +2,7 @@
 title: placeholder2
 description: https://khdev.ch
 slug: placeholder2
-img: khdev.webp
+img: python.webp
 banner: nuxtjs.webp
 alt: khdev
 tags: nuxt, nuxt-content, khdev
