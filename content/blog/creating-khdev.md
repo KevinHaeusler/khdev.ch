@@ -2,7 +2,7 @@
 title: Creating khdev.ch
 description: Creating a website with Nuxt-Content
 slug: creating-khdev
-img: nuxtjs.webp
+img: khdev.webp
 banner: nuxtjs.webp
 alt: nuxtjs
 tags: nuxt, nuxt-content, khdev
