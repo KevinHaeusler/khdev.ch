@@ -1,4 +1,6 @@
+import getSiteMeta from './plugins/getSiteMeta'
 let shiki
+const meta = getSiteMeta()
 import('shiki') // only seems to work with the promise form of 'import'
   .then((res) => {
     shiki = res
@@ -10,16 +12,34 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'khdev.ch',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en-GB'
     },
+    title: 'AI & ML | Python | Webdev Blog',
     meta: [
+      ...meta,
       { charset: 'utf-8' },
+      { name: 'HandheldFriendly', content: 'True' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { property: 'og:site_name', content: 'KHDev' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Articles about AI & ML, Python, Webdev and more.'
+      },
+      { property: 'og:image:width', content: '740' },
+      { property: 'og:image:height', content: '300' },
+      { name: 'twitter:site', content: '@khdev_kevinhaeusler' },
+      { name: 'twitter:card', content: 'summary_large_image' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      {
+        hid: 'canonical',
+        rel: 'canonical',
+        href: process.env.BASE_URL
+      }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

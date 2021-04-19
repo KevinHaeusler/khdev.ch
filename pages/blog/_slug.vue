@@ -53,12 +53,59 @@
 </template>
 
 <script>
+import getSiteMeta from '@/plugins/getSiteMeta'
 export default {
   scrollToTop: true,
   async asyncData({ $content, params }) {
     const article = await $content('blog', params.slug).fetch()
 
     return { article }
+  },
+  head() {
+    return {
+      title: this.article.title,
+      meta: [
+        ...this.meta,
+        {
+          property: 'article:published_time',
+          content: this.article.createdAt
+        },
+        {
+          property: 'article:modified_time',
+          content: this.article.updatedAt
+        },
+        {
+          property: 'article:tag',
+          content: this.article.tags ? this.article.tags.toString() : ''
+        },
+        { name: 'twitter:label1', content: 'Written by' },
+        { name: 'twitter:data1', content: 'Kevin Haeusler' },
+        { name: 'twitter:label2', content: 'Filed under' },
+        {
+          name: 'twitter:data2',
+          content: this.article.tags ? this.article.tags.toString() : ''
+        }
+      ],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: `https://khdev.ch/blog/${this.$route.params.slug}`
+        }
+      ]
+    }
+  },
+  computed: {
+    meta() {
+      const metaData = {
+        type: 'article',
+        title: this.article.title,
+        description: this.article.description,
+        url: `${this.$config.baseUrl}/blog/${this.$route.params.slug}`,
+        mainImage: this.article.image
+      }
+      return getSiteMeta(metaData)
+    }
   },
   methods: {
     formatDate(date) {
