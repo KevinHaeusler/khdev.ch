@@ -1,4 +1,6 @@
 import getSiteMeta from './plugins/getSiteMeta'
+import getRoutes from './plugins/getRoutes'
+
 let shiki
 const meta = getSiteMeta()
 import('shiki') // only seems to work with the promise form of 'import'
@@ -88,5 +90,11 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+  sitemap: {
+    hostname: process.env.BASE_URL,
+    routes() {
+      return getRoutes()
+    }
+  }
 }
