@@ -1,6 +1,6 @@
 <template>
   <div class="text-sm md:text-base">
-    Kevin Haeusler@KHDev ©{{ currentDate.getFullYear() }} built with
+    Kevin Haeusler ©{{ currentDate.getFullYear() }} built with
     <a class="text-green-500 hover:text-green-400" href="https://nuxtjs.org/"
       >Nuxt</a
     >
