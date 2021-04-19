@@ -119,6 +119,7 @@ export default {
         'createdAt'
       ])
       .sortBy('createdAt', 'desc')
+      .limit(3)
       .fetch()
 
     const projects = await $content('projects', params.slug)
@@ -132,6 +133,7 @@ export default {
         'createdAt'
       ])
       .sortBy('createdAt', 'desc')
+      .limit(3)
       .fetch()
 
     return {
