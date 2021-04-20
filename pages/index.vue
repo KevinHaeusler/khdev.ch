@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="w-screen px-5 pt-20 pb-5 mb-5 bg-white shadow dark:bg-darkmodediv 3xl:max-w-screen-xl lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="w-screen px-5 pt-20 pb-5 mb-5 bg-white shadow dark:bg-darkmodediv lg:m-auto lg:mb-5 lg:mt-5 lg:pt-5 lg:max-w-screen-sm xl:max-w-screen-lg"
     >
       <h1>KHDev an AI & ML | Python | Webdev Blog</h1>
       <div class="prose max-w-none prose-green dark:text-gray-100">
@@ -24,7 +24,7 @@
     </div>
     <h2 class="mb-5 text-center">Latest Projects:</h2>
     <div
-      class="grid xl:grid-cols-3 xl:gap-8 2xl:gap-8 3xl:gap-40 lg:max-w-screen-sm xl:max-w-screen-lg 3xl:max-w-screen-xl lg:m-auto"
+      class="grid xl:grid-cols-3 xl:gap-8 2xl:gap-8 lg:max-w-screen-sm xl:max-w-screen-lg lg:m-auto"
     >
       <div
         v-for="project of projects"
@@ -70,7 +70,7 @@
     <div
       v-for="article of articles"
       :key="article"
-      class="mb-5 bg-white shadow dark:bg-darkmodediv 3xl:max-w-screen-xl md:h-80 lg:m-auto lg:mb-5 lg:max-w-screen-sm xl:max-w-screen-lg"
+      class="mb-5 bg-white shadow dark:bg-darkmodediv md:h-80 lg:m-auto lg:mb-5 lg:max-w-screen-sm xl:max-w-screen-lg"
     >
       <nuxt-link :to="{ name: 'blog-slug', params: { slug: article.slug } }">
         <img
